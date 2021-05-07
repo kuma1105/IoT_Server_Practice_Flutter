@@ -13,6 +13,38 @@ class myApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blue[300],
         body: _body(),
+        appBar: AppBar(
+          title: Text('IoT서버실무 무드가습기'),
+          centerTitle: true,
+          flexibleSpace: new Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: <Color>[
+                  Colors.red,
+                  Colors.blue,
+                ])),
+          ),
+          elevation: 0.0, //입체감을 주는 효과
+          leading: IconButton(
+            //leaging : 아이콘 버튼을 왼쪽에 배치
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              //함수 형태로 터치했을 때 일어나는 이벤트를 정의함
+              debugPrint('menu button is clicked');
+            },
+          ),
+          actions: <Widget>[
+            //복수의 아이콘 버튼 등을 오른쪽에 배치
+            IconButton(
+              icon: Icon(Icons.settings),
+              onPressed: () {
+                debugPrint('setting button is clicked');
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -20,7 +52,7 @@ class myApp extends StatelessWidget {
 
 _body() {
   return Padding(
-      padding: EdgeInsets.all(30),
+      padding: EdgeInsets.all(25),
       child: Column(
         children: [
           //현재온도와 현재습도를 보여주는 ROW
@@ -29,7 +61,7 @@ _body() {
             children: [
               Container(
                   margin: EdgeInsets.all(10),
-                  height: 130,
+                  height: 100,
                   width: 130,
                   decoration: BoxDecoration(
                       color: Colors.orange[200],
@@ -42,7 +74,7 @@ _body() {
                   ))),
               Container(
                   margin: EdgeInsets.all(10),
-                  height: 130,
+                  height: 100,
                   width: 130,
                   decoration: BoxDecoration(
                       color: Colors.lightBlue[200],
@@ -53,6 +85,41 @@ _body() {
                       child: Text(
                     '현재습도',
                     style: TextStyle(color: Colors.black, fontSize: 25),
+                  ))),
+            ],
+          ),
+          SizedBox(height: 10),
+          //파란색 LED 색 조절 ROW
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly, //위젯 간격 균등 배분
+            children: [
+              Container(
+                  width: 100,
+                  height: 70,
+                  decoration: BoxDecoration(
+                      color: Colors.white70,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Center(
+                      child: Text(
+                    'NULL',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.black),
+                  ))),
+              Container(
+                  width: 100,
+                  height: 70,
+                  decoration: BoxDecoration(
+                      color: Colors.white70,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Center(
+                      child: Text(
+                    'NULL',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Colors.black),
                   ))),
             ],
           ),
@@ -96,6 +163,9 @@ _body() {
                     textStyle: TextStyle(color: Colors.black, fontSize: 20)),
                 onPressed: () {
                   debugPrint('가습기를 켭니다.');
+                  // Scaffold.of(context).showSnackBar(SnackBar(
+                  //   content: Text('Hello'),
+                  // ));
                 },
                 child: Text(
                   '가습기 On',
@@ -396,41 +466,6 @@ _body() {
             ],
           ),
           // 간격 30
-          SizedBox(height: 10),
-          //파란색 LED 색 조절 ROW
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly, //위젯 간격 균등 배분
-            children: [
-              Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.white70,
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Center(
-                      child: Text(
-                    '최고온도',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Colors.black),
-                  ))),
-              Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                      color: Colors.white70,
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Center(
-                      child: Text(
-                    '최대습도',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Colors.black),
-                  ))),
-            ],
-          )
         ],
       ));
 }
