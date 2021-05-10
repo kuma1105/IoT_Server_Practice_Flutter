@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'toast.dart';
 
 void main() => runApp(myApp());
 
@@ -51,6 +53,15 @@ class myApp extends StatelessWidget {
 }
 
 _body() {
+  // Center(
+  //   child: FlatButton(
+  //     onPressed: () {
+  //       flutterToast();
+  //     },
+  //     child: Text('Toast'),
+  //     color: Colors.blue,
+  //   ),
+  // );
   return Padding(
       padding: EdgeInsets.all(25),
       child: Column(
@@ -163,6 +174,7 @@ _body() {
                     textStyle: TextStyle(color: Colors.black, fontSize: 20)),
                 onPressed: () {
                   debugPrint('가습기를 켭니다.');
+                  humiOnToast();
                   // Scaffold.of(context).showSnackBar(SnackBar(
                   //   content: Text('Hello'),
                   // ));
@@ -187,6 +199,7 @@ _body() {
                     textStyle: TextStyle(color: Colors.black, fontSize: 20)),
                 onPressed: () {
                   debugPrint('가습기를 끕니다.');
+                  humiOffToast();
                 },
                 child: Text(
                   '가습기 Off',
@@ -215,6 +228,7 @@ _body() {
                     textStyle: TextStyle(color: Colors.black, fontSize: 20)),
                 onPressed: () {
                   debugPrint('LED를 켭니다.');
+                  ledOnToast();
                 },
                 child: Text('LED On'),
                 // child: Container(
@@ -233,6 +247,7 @@ _body() {
                     textStyle: TextStyle(color: Colors.black, fontSize: 20)),
                 onPressed: () {
                   debugPrint('LED를 끕니다.');
+                  ledOffToast();
                 },
                 child: Text('LED Off'),
                 // child: Container(
@@ -269,6 +284,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('RED 1단계');
+                  r1toast();
                 },
                 child: Text('1'),
                 style: ButtonStyle(
@@ -286,6 +302,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('RED 2단계');
+                  r2toast();
                 },
                 child: Text('2'),
                 style: ButtonStyle(
@@ -303,6 +320,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('RED 3단계');
+                  r3toast();
                 },
                 child: Text('3'),
                 style: ButtonStyle(
@@ -342,6 +360,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('GREEN 1단계');
+                  g1toast();
                 },
                 child: Text('1'),
                 style: ButtonStyle(
@@ -359,6 +378,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('GREEN 2단계');
+                  g2toast();
                 },
                 child: Text('2'),
                 style: ButtonStyle(
@@ -376,6 +396,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('GREEN 3단계');
+                  g3toast();
                 },
                 child: Text('3'),
                 style: ButtonStyle(
@@ -415,6 +436,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('BLUE 1단계');
+                  b1toast();
                 },
                 child: Text('1'),
                 style: ButtonStyle(
@@ -432,6 +454,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('BLUE 2단계');
+                  b2toast();
                 },
                 child: Text('2'),
                 style: ButtonStyle(
@@ -449,6 +472,7 @@ _body() {
               ElevatedButton(
                 onPressed: () {
                   debugPrint('BLUE 3단계');
+                  b3toast();
                 },
                 child: Text('3'),
                 style: ButtonStyle(
