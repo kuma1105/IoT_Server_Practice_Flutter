@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-void humiOnToast() {
-  Fluttertoast.showToast(
-      msg: '가습기를 켭니다',
-      gravity: ToastGravity.BOTTOM,
-      backgroundColor: Colors.black54,
-      fontSize: 20.0,
-      textColor: Colors.white,
-      toastLength: Toast.LENGTH_SHORT);
-}
+// void humiOnToast() {
+//   Fluttertoast.showToast(
+//       msg: '가습기를 켭니다',
+//       gravity: ToastGravity.BOTTOM,
+//       backgroundColor: Colors.black54,
+//       fontSize: 20.0,
+//       textColor: Colors.white,
+//       toastLength: Toast.LENGTH_SHORT);
+// }
 
-void humiOffToast() {
-  Fluttertoast.showToast(
-      msg: '가습기를 끕니다',
-      gravity: ToastGravity.BOTTOM,
-      backgroundColor: Colors.black54,
-      fontSize: 20.0,
-      textColor: Colors.white,
-      toastLength: Toast.LENGTH_SHORT);
-}
+// void humiOffToast() {
+//   Fluttertoast.showToast(
+//       msg: '가습기를 끕니다',
+//       gravity: ToastGravity.BOTTOM,
+//       backgroundColor: Colors.black54,
+//       fontSize: 20.0,
+//       textColor: Colors.white,
+//       toastLength: Toast.LENGTH_SHORT);
+// }
 
 void ledOnToast() {
   Fluttertoast.showToast(
@@ -41,9 +41,9 @@ void ledOffToast() {
       toastLength: Toast.LENGTH_SHORT);
 }
 
-void r1toast() {
+void ledIsOff() {
   Fluttertoast.showToast(
-      msg: 'LED를 빨강 1단계로 설정합니다',
+      msg: 'Led Off 버튼을 눌러 LED를 켜주세요',
       gravity: ToastGravity.BOTTOM,
       backgroundColor: Colors.black54,
       fontSize: 20.0,
@@ -51,9 +51,9 @@ void r1toast() {
       toastLength: Toast.LENGTH_SHORT);
 }
 
-void r2toast() {
+void y1toast() {
   Fluttertoast.showToast(
-      msg: 'LED를 빨강 2단계로 설정합니다',
+      msg: 'LED를 노랑 1단계로 설정합니다',
       gravity: ToastGravity.BOTTOM,
       backgroundColor: Colors.black54,
       fontSize: 20.0,
@@ -61,9 +61,19 @@ void r2toast() {
       toastLength: Toast.LENGTH_SHORT);
 }
 
-void r3toast() {
+void y2toast() {
   Fluttertoast.showToast(
-      msg: 'LED를 빨강 3단계로 설정합니다',
+      msg: 'LED를 노랑 2단계로 설정합니다',
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.black54,
+      fontSize: 20.0,
+      textColor: Colors.white,
+      toastLength: Toast.LENGTH_SHORT);
+}
+
+void y3toast() {
+  Fluttertoast.showToast(
+      msg: 'LED를 노랑 3단계로 설정합니다',
       gravity: ToastGravity.BOTTOM,
       backgroundColor: Colors.black54,
       fontSize: 20.0,
@@ -124,6 +134,36 @@ void b2toast() {
 void b3toast() {
   Fluttertoast.showToast(
       msg: 'LED를 파랑 3단계로 설정합니다',
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.black54,
+      fontSize: 20.0,
+      textColor: Colors.white,
+      toastLength: Toast.LENGTH_SHORT);
+}
+
+void p1toast() {
+  Fluttertoast.showToast(
+      msg: 'LED를 보라 1단계로 설정합니다',
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.black54,
+      fontSize: 20.0,
+      textColor: Colors.white,
+      toastLength: Toast.LENGTH_SHORT);
+}
+
+void p2toast() {
+  Fluttertoast.showToast(
+      msg: 'LED를 보라 2단계로 설정합니다',
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.black54,
+      fontSize: 20.0,
+      textColor: Colors.white,
+      toastLength: Toast.LENGTH_SHORT);
+}
+
+void p3toast() {
+  Fluttertoast.showToast(
+      msg: 'LED를 보라 3단계로 설정합니다',
       gravity: ToastGravity.BOTTOM,
       backgroundColor: Colors.black54,
       fontSize: 20.0,
