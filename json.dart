@@ -1,14 +1,14 @@
 import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
-class User {
+class Json {
   final String tmp;
   final String hum;
   final String key;
 
-  User(this.tmp, this.hum, this.key);
+  Json(this.tmp, this.hum, this.key);
 
-  User.fromJson(Map<String, dynamic> json)
+  Json.fromJson(Map<String, dynamic> json)
       : tmp = json['tmp'],
         hum = json['hum'],
         key = json['key'];
